@@ -439,7 +439,7 @@ void data::read_group_assignments() {
     for (int i = 0; i < M; i++) {
         int group;
         inFile >> group;
-        group = group - 1; // if groups are labled from 1-K instead of 0 to K-1
+        group = group - 1; // if groups are labled from 1 to K instead of 0 to K-1
         if (group < 0 || group > K - 1) {
             std::cout << "FATAL: group assignment " << group << " out of range [0," << K - 1 << "]" << std::endl;
             exit(EXIT_FAILURE);
